@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
-import { StreamAutocompleteTextareaModule, StreamChatModule } from 'stream-chat-angular';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TranslateModule, StreamAutocompleteTextareaModule, StreamChatModule],
+  imports: [],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss'
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'chat-example';
+}
+ 
