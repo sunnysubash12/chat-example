@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @use 'stream-chat-angular/src/assets/styles/scss/index.scss';
 
+.str-chat__theme-dark {
+    --str-chat__primary-color: #009688;
+  }
+
 html {
   height: 100%;
 }
