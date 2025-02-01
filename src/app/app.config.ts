@@ -1,15 +1,6 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
-import { StreamChatModule } from 'stream-chat-angular';
+import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    StreamChatModule,  // ✅ Import Stream Chat Module
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
+export const appConfig: ApplicationConfig = {
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), importProvidersFrom(TranslateModule.forRoot())],
+};
